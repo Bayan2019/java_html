@@ -1,0 +1,48 @@
+body {
+    display: grid;
+    align-items: center;
+}
+
+header {
+    display: inline-flex;
+    background-color: #1877F2;
+    margin: auto;
+    color: white;
+    width: 900px;
+}
+
+nav {
+    display: inline-flex;
+    margin-right: 0;
+    padding-right: 0;
+    width: 900px;
+    justify-content: space-between;
+}
+
+nav h3 {
+    margin: 0 5px 0 5px;
+    width: auto;
+}
+
+nav a i:hover {
+    color: red;
+}
+
+nav i {
+    display: inline-flex;
+    font-size: 25px;
+    color:white;
+    width: auto;
+    margin-top: 2px;
+    margin-bottom: 0;
+    margin-right: 5px;
+    padding-right: 0;
+    justify-content:flex-end
+}
+
+.three-columns {
+    display: inline-flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 900px;
+}
