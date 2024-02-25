@@ -17,6 +17,7 @@ nav {
     padding-right: 0;
     width: 900px;
     justify-content: space-between;
+    align-items: center;
 }
 
 nav h3 {
@@ -45,4 +46,178 @@ nav i {
     justify-content: space-between;
     margin: auto;
     width: 900px;
+}
+
+.me {
+    display: flex;
+    margin: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* align-content: space-evenly; */
+    flex-direction: column;
+}
+
+.me a {
+    color: darkblue;
+}
+
+.me a:hover {
+    color: greenyellow;
+}
+
+.me img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.me-me {
+    /* background-color: yellow; */
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.me-me h5 {
+    margin: 0 10px 0 10px;
+}
+
+.me-me i {
+    font-size: 25px;
+    margin: 3px;
+}
+
+.posts {
+    display: grid;
+    max-width: 450px;
+}
+
+.posts .post {
+    margin: 7px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.posts .post img {
+    width: 400px;
+    height: 160px;
+}
+
+.posts .post a button {
+    background-color: #1877F2;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.posts .post a button:hover {
+    color: green;
+    background-color: lightgreen;
+}
+
+.posts .post a button {
+    padding: 5px;
+}
+
+.right {
+    display: flex;
+    margin: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* align-content: space-evenly; */
+    flex-direction: column;
+}
+
+.right h4 {
+    color: grey;
+}
+
+.right ul {
+    list-style-type: none;
+}
+
+.sponsors {
+    display: flex;
+    margin: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.right .sponsors img {
+    width: 60px;
+}
+
+.right .sponsors .sponsor {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.right .sponsors .sponsor h5 {
+    margin: 0 10px 0 10px;
+}
+
+.friends {
+    display: grid;
+}
+
+.friends img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 5px;
+    padding: 0;
+}
+
+.friends button {
+    padding: 3px;
+    margin: 3px;
+}
+
+.friend {
+    display: flex;
+    flex-direction: row;
+    min-width: 400px;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: grey;
+    padding: 5px;
+}
+
+.left {
+    margin: 0;
+    padding: 1px;
+}
+
+.friend h5 {
+    margin: 2px;
+    padding: 0;
+}
+
+.friend h6 {
+    margin: 2px;
+    padding: 0;
+}
+
+.message {
+    background-color: #1877F2;
+    color: aliceblue;
+}
+
+.message:hover {
+    background-color: greenyellow;
+    color: green;
+}
+
+.remove {
+    background-color: rgb(230, 129, 148);
+    color: rgb(67, 104, 136);
+}
+
+.remove:hover {
+    background-color: red;
+    color:rgb(232, 182, 166);
 }
