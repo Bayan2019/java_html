@@ -4,15 +4,11 @@ To make pages more light and portable I used link for images from the internet s
 
 ## 1. Introduction to HTML
 
-### Avatar
-
-### Form
-
-### Register
-
-### Gallery
-
-### Table
+1. Avatar
+2. Form
+3. Register
+4. Gallery
+5. Table
 
 ## 2. Other HTML Tags
 
