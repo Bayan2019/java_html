@@ -4,7 +4,7 @@ To make pages more light and portable I used link for images from the internet s
 
 ## 1. Introduction to HTML
 
-1. Avatar
+1. [Avatar](https://github.com/Bayan2019/java_html/blob/main/01_html/1_avatar.html)
 2. Form
 3. Register
 4. Gallery
