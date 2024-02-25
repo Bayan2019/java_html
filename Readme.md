@@ -1,35 +1,33 @@
-# Intro to Web
+# Intro to Web (Module 3)
 
-## Module 3
+## 1. Introduction to HTML
 
-### 1. Introduction to HTML
+### Avatar
 
-#### Avatar
+### Form
 
-#### Form
+### Register
 
-#### Register
+### Gallery
 
-#### Gallery
+### Table
 
-#### Table
+## 2. Other HTML Tags
 
-### 2. Other HTML Tags
+### Register
 
-#### Register
+### Movies
 
-#### Movies
+### Shop
 
-#### Shop
+## 3. CSS Basics
 
-### 3. CSS Basics
+### Regular Task
 
-#### Regular Task
+### Sprint Task
 
-#### Sprint Task
+## 4. Flexbox
 
-### 4. Flexbox
+### Regular Task
 
-#### Regular Task
-
-#### Sprint Task
+### Sprint Task
