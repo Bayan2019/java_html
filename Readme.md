@@ -28,6 +28,12 @@ To make pages more light and portable I used link for images from the internet s
 
 ## 5. JavaScript Basics
 
+1. [$y=x^2+2x-1$](https://github.com/Bayan2019/java_html/blob/main/05_javascript/task01.html)
+2. [Form](https://github.com/Bayan2019/java_html/blob/main/05_javascript/task01.html)
+3. [Register](https://github.com/Bayan2019/java_html/blob/main/05_javascript/task01.html)
+4. [Gallery](https://github.com/Bayan2019/java_html/blob/main/05_javascript/task01.html)
+5. [Table](https://github.com/Bayan2019/java_html/blob/main/05_javascript/task01.html)
+
 ## 6. JavaScript Cycles
 
 ## 7. JavaScript Arrays
