@@ -25,3 +25,15 @@ To make pages more light and portable I used link for images from the internet s
 
 1. [Regular Task](https://github.com/Bayan2019/java_html/tree/main/04_flexbox/Task)
 2. [Sprint Task](https://github.com/Bayan2019/java_html/tree/main/04_flexbox/SprintTask)
+
+## 5. JavaScript Basics
+
+## 6. JavaScript Cycles
+
+## 7. JavaScript Arrays
+
+## 8. DOM
+
+## 9. Local Storage
+
+## 10. Bootstrap Basics
