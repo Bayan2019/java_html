@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/02_customer_churn_html/main/pictures/logos2.png" />
+    </head>
+    <body>
+        <h1>Conversion</h1>
+        <script>
+            let n = parseInt(prompt("INSERT YOUR AMOUNT IN KZT: "));
+            let i = parseInt(prompt("1-CONVERT TO USD\n2-CONVERT TO EUR\n3-CONVERT TO GBP"));
+            let total
+            if (i==1) {
+                total=n/380
+            } else if (i==2) {
+                total=n/430
+            } else if (i==3) {
+                total=n/480
+            }
+            alert(total)
+        </script>
+    </body>
+</html>

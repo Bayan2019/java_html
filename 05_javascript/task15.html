@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/02_customer_churn_html/main/pictures/logos2.png" />
+    </head>
+    <body>
+        <h1>Foreign Exchange from KZT to USD</h1>
+        <script>
+            let n = parseInt(prompt("Enter the amount of KZT: "));
+            if (n%380==0) {
+                alert(`ONLY ${n/380} USD`)
+            } else {
+                let f = (Math.floor((n / 380) * 100) / 100).toFixed(2)
+                alert(`${Math.floor(n / 380)} USD and ${f*100-100*Math.floor(n / 380)} cents`)
+            }
+        </script>
+    </body>
+</html>

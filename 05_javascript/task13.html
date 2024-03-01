@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/02_customer_churn_html/main/pictures/logos2.png" />
+    </head>
+    <body>
+        <h1>Profession</h1>
+        <script>
+            let profession;
+            let i = parseInt(prompt("Choose your branch:\n1 - Science\n2 - Humanitarian subjects\n3 - Art\n4 - Sport"))
+            let j;
+            if (i==1) {
+                j = parseInt(prompt("Choose your major:\n1 - Math\n2 - Physics"))
+                if (j==1) {
+                    profession = "You are Financier"
+                } else if (j==2) {
+                    profession = "You are Engineer"
+                }
+            } else if (i==2) {
+                j = parseInt(prompt("Choose your major:\n1 - History\n2 - Foreign Languages"))
+                if (j==1) {
+                    profession = "You are Historic or Diplomat"
+                } else if (j==2) {
+                    profession = "You are Translator"
+                }
+            } else if (i==3) {
+                j = parseInt(prompt("Choose your major:\n1 - Drawing\n2 - Singing"))
+                if (j==1) {
+                    profession = "You are Painter or Architect"
+                } else if (j==2) {
+                    profession = "You are Singer or Tamada"
+                }
+            } else if (i==4) {
+                j = parseInt(prompt("Choose your major:\n1 - Team\n2 - Individual"))
+                if (j==1) {
+                    profession = "You are Football or Basketball player"
+                } else if (j==2) {
+                    profession = "You are Boxer or Tennis player"
+                }
+            } else {
+                profession='invalid choice'
+            }
+            alert(profession)
+        </script>
+    </body>
+</html>
