@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/02_customer_churn_html/main/pictures/logos2.png" />
+    </head>
+    <body>
+        <h1>The Sum and Average of Array</h1>
+        <script>
+            let n = parseInt(prompt("Enter the length of an array: "));
+            let array = [];
+            for (let i=0; i<n; i++) {
+                array.push(parseInt(prompt(`Enter ${i}th element of the array: `)))
+            }
+            // let max = -Infinity;
+            // let max = Math.max(...array)
+            let sum = 0;
+            for (let ar of array) {
+                sum += ar;
+            }
+            let mean = sum/n;
+            alert(sum + " " + mean)
+        </script>
+    </body>

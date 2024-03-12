@@ -47,6 +47,13 @@ To make pages more light and portable I used link for images from the internet s
 
 ## 6. JavaScript Cycles
 
+1. [Reverse Loop]()
+2. [The Maximum of an Array]()
+3. [The Sum and Average of an Array]()
+4. [Squared $x^2$]()
+5. [Authentification]()
+6. [Search]()
+
 ## 7. JavaScript Arrays
 
 ## 8. DOM

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/02_customer_churn_html/main/pictures/logos2.png" />
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+    </head>
+    <body>
+        <h1>Squared $$x^2$$</h1>
+        <script>
+            let n = parseInt(prompt("Enter the length of an array: "));
+            let array = [];
+            for (let i=0; i<n; i++) {
+                array.push(parseInt(prompt(`Enter ${i}th element of the array: `)))
+            }
+            // let max = -Infinity;
+            // let max = Math.max(...array)
+            let str = '';
+            for (let ar of array) {
+                str += ar*ar;
+                str +=' '
+            }
+            alert(str)
+        </script>
+    </body>

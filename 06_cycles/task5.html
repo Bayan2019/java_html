@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/02_customer_churn_html/main/pictures/logos2.png" />
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+    </head>
+    <body>
+        <h1>Authentification</h1>
+        <script>
+            let users = [{"login":"ilyas", "password": "qwerty"},
+            {"login":"eldar", "password": "qqqqq"},
+            {"login":"assylkhan", "password": "qweqwe"},
+            {"login":"anel", "password": "asdasd"},
+            {"login":"alibek", "password": "aaaaaa"}];
+
+            let login = prompt("Enter the login: ");
+            let password = prompt("Enter the password: ");
+            let message = "User not found"
+            for (let user of users) {
+                if (user['login']==login && user['password']==password) {
+                    message = "Welcome, you are authenticated"
+                    break
+                }
+            }
+            alert(message)
+        </script>
+    </body>

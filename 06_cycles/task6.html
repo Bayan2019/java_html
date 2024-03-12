@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/02_customer_churn_html/main/pictures/logos2.png" />
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+    </head>
+    <body>
+        <h1>Search</h1>
+        <script>
+            let books = [{"title":"Attack on Titan: Volume 13", "author": "Hajime Isayama", "ISBN":"9781612626864", "price": 43.28},
+            {"title":"The Art of Super Mario Odyssey", "author": "Nintendo", "ISBN":"9781506713816", "price": 133.85},
+            {"title":"Getting Away Is Deadly: An Ellie Avery Mystery", "author": "Sara Rosett", "ISBN":"9781617734076", "price": 26.15},
+            {"title":"The Painted Man (The Demon Cycle, Book 1)", "author": "Peter V. Brett", "ISBN":"9780007287758", "price": 28.54},
+            {"title":"A Feast for Crows (A Song of Ice and Fire, Book 4)", "author": "George R.R. Martin", "ISBN":"9780007369218", "price": 29.29},
+            {"title":"God of War: The Official Novelization", "author": "J.M. Barlog", "ISBN":"9781789090154", "price": 15.82},
+            {"title":"Edgedancer: From the Stormlight Archive", "author": "Brandon Sanderson", "ISBN":"9781250166609", "price": 36.79},
+            {"title":"Blood, Sweat, and Pixels: The Triumphant, Turbulent Stories Behind How Video Games Are Made", "author": "Jason Schreier", "ISBN":"9780062651242", "price": 50.25},
+            {"title":"Sword of Destiny: Witcher 2: Tales of the Witcher", "author": "Andrzej Sapkowski", "ISBN":"9781473211551", "price": 43.28},
+            {"title":"The Mysterious Affair at Styles (Poirot)", "author": "Agatha Christie", "ISBN":"9780007422586", "price": 19.28},
+            {"title":"Deadpool Kills the Marvel Universe", "author": "Cullen Bunn", "ISBN":"9781302368807", "price": 27.53},
+            {"title":"The Red Signal: An Agatha Christie Short Story", "author": "Agatha Christie", "ISBN":"9780007452170", "price": 7.50},
+            {"title":"That Time I got Reincarnated as a Slime 11", "author": "Story by FUSE", "ISBN":"9781646590797", "price": 43.28},
+            {"title":"Ask A Footballer", "author": "James Milner", "ISBN":"9781529404937", "price": 98.42},
+            {"title":"Edgedancer: From the Stormlight Archive", "author": "Brandon Sanderson", "ISBN":"9781250166609", "price": 36.79},
+            {"title":"Ultimate Spider-Man Vol. 11: Carnage", "author": "Brian Michael Bendis", "ISBN":"9780785180197", "price": 43.28},
+            {"title":"The Mysterious Affair at Styles (Poirot)", "author": "Agatha Christie", "ISBN":"9780007422586", "price": 19.28}];
+
+            let search = prompt("Enter the term: ");
+            let books1 = []
+            for (let book of books) {
+                if (book['title'].toLowerCase().includes(search)) {
+                    books1.push(book)
+                }
+            }
+            let message = "";
+            for (let book of books1) {
+                message+=`${book['title']} - ${book['author']} - ${book['ISBN']} - ${book['price']}$\n`;
+            }
+            alert(message)
+        </script>
+    </body>
