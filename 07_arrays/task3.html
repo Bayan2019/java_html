@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/02_customer_churn_html/main/pictures/logos2.png" />
+    </head>
+    <body>
+        <h1>Positive Numbers</h1>
+        <script>
+            let array = [];
+            let number;
+            for (let i=0; true; i++) {
+                number = parseInt(prompt(`Enter ${i}th element of the array: `))
+                if (number==0) {
+                    break
+                } else {
+                    array.push(number)
+                }
+            }
+            let positive_numbers = []
+            for (let n of array) {
+                if (n>0) {
+                    positive_numbers.push(n)
+                }
+            }
+
+            str = ""
+
+            for (let n of positive_numbers) {
+                str += `${n} `
+            }
+
+            alert(str)
+        </script>
+    </body>
+</html>

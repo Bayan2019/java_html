@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/02_customer_churn_html/main/pictures/logos2.png" />
+    </head>
+    <body>
+        <h1>Cars</h1>
+        <script>
+            let cars = [{"name":"Acura Mdx 3.7L Technology", "price": 13897, "year": 2012, "volume": 3.7},
+                {"name":"Audi A7 3.0T Prestige Quattro", "price": 23993, "year": 2012, "volume": 3.0},
+                {"name":"Bmw 650 I Xdrive", "price": 35990, "year": 2012, "volume": 4.4},
+                {"name":"Buick Enclave Premium", "price": 11500, "year": 2012, "volume": 3.6},
+                {"name":"Cadillac Cts Premium", "price": 16897, "year": 2012, "volume": 3.6},
+                {"name":"Dodge Charger Srt8", "price": 25899, "year": 2012, "volume": 6.4},
+                {"name":"Ford E150 Commercial", "price": 19997, "year": 2012, "volume": 4.6},
+                {"name":"Kia Optima Lx", "price": 12990, "year": 2012, "volume": 2.4},
+                {"name":"Lincoln Mkz Base", "price": 10499, "year": 2012, "volume": 3.5},
+                {"name":"Mazda Mazda3 I Touring", "price": 13998, "year": 2012, "volume": 2.0},
+                {"name":"Mercedes-Benz C-Class C 300 4Matic Sport", "price": 9900, "year": 2012, "volume": 3.0},
+                {"name":"Nissan 370Z Base", "price": 14850, "year": 2013, "volume": 3.7},
+                {"name":"Porsche 911 Carrera", "price": 71995, "year": 2013, "volume": 3.4},
+                {"name":"Subaru Brz Limited", "price": 18998, "year": 2014, "volume": 2.0},
+                {"name":"Ram 1500 Laramie", "price": 18987, "year": 2014, "volume": 5.7},
+                {"name":"Toyota 4Runner Limited", "price":25777, "year": 2014, "volume": 4.0},
+                {"name":"Volkswagen Beetle", "price": 16998, "year": 2015, "volume": 1.8},
+                {"name":"Ford C-Max Energi Sel", "price": 19995, "year": 2015, "volume": 2.0},
+                {"name":"Honda Accord Ex", "price": 18998, "year": 2016, "volume": 2.4},
+                {"name":"Cadillac Ats 2.0L Turbo", "price": 20999, "year": 2016, "volume": 2.0},
+                {"name":"Mazda Cx-3 Grand Touring", "price": 20998, "year": 2016, "volume": 2.0},
+                {"name":"Ford C-Max Energi Se", "price": 14500, "year": 2017, "volume": 2.0},
+                {"name":"Toyota 4Runner Limited", "price": 33377, "year": 2018, "volume": 4.0},
+                {"name":"Subaru Forester 2.5I", "price": 22275, "year": 2018, "volume": 2.5},];
+            n = parseInt(prompt("Enter the search type: \n1 - TO SEARCH BY NAME\n2 - TO SEARCH BY YEAR\n3 - TO SEARCH BY ENGINE VOLUME\n4 - TO SEARCH BY PRICE\n5 - TO EXIT"))
+
+            let found_cars = []
+
+            if (n==1) {
+                let word = prompt("Enter the search word: ")
+                for (let car of cars) {
+                    if (car['name'].toLocaleLowerCase().includes(word.toLocaleLowerCase())) {
+                        found_cars.push(car)
+                    }
+                }
+            } else if (n==2) {
+                let start_year = parseInt(prompt("INSERT YEAR STARTS FROM: "))
+                let end_year = parseInt(prompt("INSERT YEAR ENDS: "))
+                for (let car of cars) {
+                    if (car['year']>=start_year && car['year']<=end_year) {
+                        found_cars.push(car)
+                    }
+                }
+            } else if (n==3) {
+                let start_volume = parseInt(prompt("INSERT ENGINE VOLUME STARTS FROM: "))
+                let end_volume = parseInt(prompt("INSERT ENGINE VOLUME ENDS: "))
+                for (let car of cars) {
+                    if (car['volume']>=start_volume && car['volume']<=end_volume) {
+                        found_cars.push(car)
+                    }
+                }
+            } else if (n==4) {
+                let start_price = parseInt(prompt("INSERT PRICE STARTS FROM: "))
+                let end_price = parseInt(prompt("INSERT PRICE ENDS: "))
+                for (let car of cars) {
+                    if (car['price']>=start_price && car['price']<=end_price) {
+                        found_cars.push(car)
+                    }
+                }
+            }
+
+            let message = ''
+
+            for (let car of found_cars) {
+                message+=`${car["name"]} - ${car["year"]} - ${car["volume"]} liters - ${car["price"]} USD\n`;
+            }
+
+            alert(message)
+        </script>
+    </body>
+</html>

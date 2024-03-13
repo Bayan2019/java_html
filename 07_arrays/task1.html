@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/02_customer_churn_html/main/pictures/logos2.png" />
+    </head>
+    <body>
+        <h1>The Search Method <code>.indexOf</code></h1>
+        <script>
+            let n = parseInt(prompt("Enter the length of an array: "));
+            let array = [];
+            for (let i=0; i<n; i++) {
+                array.push(parseInt(prompt(`Enter ${i}th element of the array: `)))
+            }
+            let m = parseInt(prompt("Enter the number to look for: "));
+            let index = array.indexOf(m)
+
+            if (index==-1) {
+                alert("No")
+            } else {
+                alert(`Yes ${index}`)
+            }
+        </script>
+    </body>
+</html>

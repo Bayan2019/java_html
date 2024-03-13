@@ -56,6 +56,13 @@ To make pages more light and portable I used link for images from the internet s
 
 ## 7. JavaScript Arrays
 
+1. [The Search Method ```.indexOf```]()
+2. [Geometric mean]()
+3. [Positive Numbers]()
+4. [Factorial]()
+5. [Cars]()
+6. [Students Database]()
+
 ## 8. DOM
 
 ## 9. Local Storage
