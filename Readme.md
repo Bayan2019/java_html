@@ -56,12 +56,12 @@ To make pages more light and portable I used link for images from the internet s
 
 ## 7. JavaScript Arrays
 
-1. [The Search Method ```.indexOf```]()
-2. [Geometric mean]()
-3. [Positive Numbers]()
-4. [Factorial]()
-5. [Cars]()
-6. [Students Database]()
+1. [The Search Method ```.indexOf```](https://github.com/Bayan2019/java_html/blob/main/07_arrays/task1.html)
+2. [Geometric mean](https://github.com/Bayan2019/java_html/blob/main/07_arrays/task2.html)
+3. [Positive Numbers](https://github.com/Bayan2019/java_html/blob/main/07_arrays/task3.html)
+4. [Factorial](https://github.com/Bayan2019/java_html/blob/main/07_arrays/task4.html)
+5. [Cars](https://github.com/Bayan2019/java_html/blob/main/07_arrays/task5.html)
+6. [Students Database](https://github.com/Bayan2019/java_html/blob/main/07_arrays/task6.html)
 
 ## 8. DOM
 
