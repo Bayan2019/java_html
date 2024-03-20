@@ -65,6 +65,14 @@ To make pages more light and portable I used link for images from the internet s
 
 ## 8. DOM
 
+1. [Authentification]()
+2. []()
+3. []()
+4. []()
+5. []()
+6. []()
+7. [Sprint]()
+
 ## 9. Local Storage
 
 ## 10. Bootstrap Basics
