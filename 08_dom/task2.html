@@ -7,7 +7,7 @@
         <title>JavaScript</title>
         <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos4.png" />
         <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
-        <link rel="stylesheet" href="task.css"/>
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/Bayan2019/java_html/main/08_dom/task.css"/>
     </head>
     <body>
         <header>
@@ -18,43 +18,29 @@
             <form>
                 <fieldset id="login">
                     <legend>Zoom</legend>
-                    <button type="button" id="-">-</button>
-                    <span>SAPAR</span>
-                    <button type="button" id="+">+</button>
-                    
+                    <button type="button" id="minus">-</button>
+                    <span style="font-size: 16px;">SAPAR</span>
+                    <button type="button" id="plus">+</button>             
                 </fieldset>
-                <!-- <button type="button" id="submit" click="auth()" >Submit</button> -->
             </form>
-            <h2></h2>
         </main>
         <script>
 
-            const h2 = document.querySelector('h2')
-            const form = document.querySelector('form')
-            const minus = document.querySelector('#-')
-            const plus = document.querySelector('#+')
+            const minus = document.querySelector('#minus')
+            const plus = document.querySelector('#plus')
+            const span = document.querySelector('span')
+
+            console.log(span.style.fontSize)
             
-            function zoomIi() {
-                for (let user of users) {
-                    if ((user['login']==nick.value) && (user['password']==pass.value)) {
-                        h2.className="green";
-                        h2.innerText="Authenticated";
-                        break;
-                    }
-                }
-                if (h2.innerText=='') {
-                    h2.className="red";
-                    h2.innerText="Invalid"
-                } else {
-                    h2.className="green";
-                    h2.innerText="Authenticated";
-                }
-                
+            function zoomIn() {
+                span.style.fontSize = parseInt(span.style.fontSize) - 1 + 'px';
+            }
+            function zoomOut() {
+                span.style.fontSize = parseInt(span.style.fontSize) + 1 + 'px';
             }
 
-            submit.addEventListener('click', auth);
-
-
+            minus.onclick = zoomIn;
+            plus.onclick = zoomOut;
         </script>
         <noscript>You need to enable JavaScript to view the full site.</noscript>
     </body>
