@@ -12,39 +12,29 @@
     <body>
         <header>
             <img src="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos3.png" alt="SAPAR" />
-            <h1>Authentification</h1>
+            <h1>Zoom</h1>
         </header>
         <main>
             <form>
                 <fieldset id="login">
-                    <legend>LogIn</legend>
-                    <div class="input-text">
-                        <label for="nick">NickName</label>
-                        <input type="text" placeholder="Enter your NickName" id="nick" required />
-                    </div>
-                    <div class="input-text">
-                        <label for="pass">PassWord</label>
-                        <input type="text" placeholder="Enter your PassWord" id="pass" required />
-                    </div>
+                    <legend>Zoom</legend>
+                    <button type="button" id="-">-</button>
+                    <span>SAPAR</span>
+                    <button type="button" id="+">+</button>
+                    
                 </fieldset>
-                <button type="button" id="submit" click="auth()" >Submit</button>
+                <!-- <button type="button" id="submit" click="auth()" >Submit</button> -->
             </form>
             <h2></h2>
         </main>
         <script>
-            const users = [{"login":"ilyas", "password": "qwerty"},
-            {"login":"eldar", "password": "qqqqq"},
-            {"login":"assylkhan", "password": "qweqwe"},
-            {"login":"anel", "password": "asdasd"},
-            {"login":"alibek", "password": "aaaaaa"}];
 
             const h2 = document.querySelector('h2')
             const form = document.querySelector('form')
-            const submit = document.querySelector('#submit')
-
-            console.log(submit.innerText)
+            const minus = document.querySelector('#-')
+            const plus = document.querySelector('#+')
             
-            function auth() {
+            function zoomIi() {
                 for (let user of users) {
                     if ((user['login']==nick.value) && (user['password']==pass.value)) {
                         h2.className="green";

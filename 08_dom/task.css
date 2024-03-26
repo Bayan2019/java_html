@@ -1,0 +1,103 @@
+:root {
+    --body-background: #ade8f4;
+    --header-background: #57CC98;
+    --header-color: #05668d;
+    --fieldset-background: #48cae4;
+    --fieldset-legend: #3B7813;
+    --fieldset-color: #043707;
+    --button-color: #850000;
+    --button-hover: #B5F08E;
+
+  }
+
+body {
+    display: inherit;
+    margin: auto;
+    justify-items: center;
+    background-color: var(--body-background);
+}
+
+header {
+    display: flex;
+    top:0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    vertical-align: middle;
+    margin: auto 15px;
+    justify-content: space-evenly;
+    justify-items: stretch;
+    flex-direction: row;
+    align-content: space-around;
+    background-color: var(--header-background);
+    color: var(--header-color);
+    border-radius: 15px;
+}
+
+header img {
+    height: 50px;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+form {
+    width: 80%;
+    display: grid;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+}
+
+fieldset {
+    width: 90%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    padding: 4px;
+    color: var(--fieldset-color);
+    background-color: var(--fieldset-background);
+    border: var(--fieldeest-background) solid 3px;
+}
+
+fieldset legend {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--fieldset-legend);
+}
+
+.input-text {
+    margin: 18px;
+}
+
+form button {
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 5px;
+    background-image: radial-gradient(var(--fieldset-legend), var(--header-color));
+    color: var(--button-hover);
+    border: var(--header-color) solid 3px;
+}
+
+form button:hover {
+    background-image: radial-gradient(var(--header-color), var(--fieldset-legend));
+    color: var(--body-background);
+    border: var(--fieldset-legend) solid 3px;
+}
+
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+h2 {
+    font-size: large;
+}
