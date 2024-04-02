@@ -53,6 +53,11 @@ form {
     margin: auto;
 }
 
+form img {
+    width: 700px;
+    height: 400px;
+}
+
 fieldset {
     width: 90%;
     border-radius: 15px;

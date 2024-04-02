@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript</title>
+        <link rel="stylesheet" href="./task.css" />
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos4.png" />
+        <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
+    </head>
+    <body>
+        <header>
+            <img src="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos3.png" alt="SAPAR" />
+            <h1>Transaction</h1>
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Individual</legend>
+                    <div class="input-text">
+                        <label for="name1">First Name</label>
+                        <input type="text" placeholder="Enter your Name" id="name1" required />
+                    </div>
+                    <div class="input-text">
+                        <label for="surname">Last Name</label>
+                        <input type="text" placeholder="Enter your Surname" id="surname" required />
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Account</legend>
+                    <div class="input-text">
+                        <label for="card">Card's Number</label>
+                        <input type="text" placeholder="0000-0000-0000-0000" id="card" required />
+                    </div>
+                    <div class="input-text">
+                        <label for="cvv">Card's CVV</label>
+                        <input type="number" id="cvv" required />
+                    </div>
+                </fieldset>
+                <button type="button" id="submit" >Complete</button>
+            </form>
+            <h2></h2>
+        </main>
+        <script>
+            const users = [{"card": "4035 5010 0000 0008", "cvv":123, "name":"Ilyas", "surname": "Yusupov"},
+            {"card": "4360 0000 0100 0005", "cvv":977, "name":"Abdulla", "surname": "Nurgaliev"},
+            {"card": "8171 9999 2766 0000", "cvv":143, "name":"Erasyl", "surname": "Karimov"},
+            {"card": "6243 0300 0000 0001", "cvv":608, "name":"Inkar", "surname": "Shevchenko"},
+            {"card": "5019 5555 4444 5555", "cvv":234, "name":"Aigerim", "surname": "Iskakova"},
+            {"card": "4571 0000 0000 0001", "cvv":963, "name":"Karim", "surname": "Asanov"},
+            {"card": "6011 6011 6011 6611", "cvv":488, "name":"Aykorkem", "surname": "Alieva"},
+            {"card": "3569 9900 1009 5841", "cvv":368, "name":"Maksat", "surname": "Musaev"},
+            {"card": "6771 7980 2100 0008", "cvv":234, "name":"Aibek", "surname": "Omarov"}];
+
+            const h2 = document.querySelector('h2')
+            const form = document.querySelector('form')
+            const submit = document.querySelector('#submit')
+            
+            function auth() {
+                h2.innerText="";
+                for (const user of users) {
+                    if ((user['card']==card.value) && (user['cvv']==cvv.value) && (user['name']==name1.value) && (user['surname']==surname.value)) {
+                        h2.className="green";
+                        h2.innerText="Success";
+                        break;
+                    }
+                }
+                if (h2.innerText=='') {
+                    h2.className="red";
+                    h2.innerText="Invalid"
+                } else {
+                    h2.className="green";
+                    h2.innerText="Success";
+                }
+                
+            }
+
+            submit.addEventListener('click', auth);
+
+
+        </script>
+        <noscript>You need to enable JavaScript to view the full site.</noscript>
+    </body>
+</html>

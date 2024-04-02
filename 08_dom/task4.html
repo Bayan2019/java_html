@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript</title>
+        <link rel="stylesheet" type="text/css" href='./task.css' />
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos4.png" />
+        <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
+    </head>
+    <body>
+        <header>
+            <img src="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos3.png" alt="SAPAR" />
+            <h1>Justice Gallery</h1>
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Zoom</legend>
+                    <button type="button" id="minus"><</button>
+                    <img id="gallery" src="https://media.istockphoto.com/id/1491771681/photo/lady-justice-in-law-office.jpg?s=1024x1024&w=is&k=20&c=sLoiWg6VFswlNufAex_y7WMwO_wuUZCCX8KlyqrmlZ4=" />
+                    <button type="button" id="plus">></button>             
+                </fieldset>
+            </form>
+        </main>
+        <script>
+
+            const img_array = [
+                "https://media.istockphoto.com/id/1491771681/photo/lady-justice-in-law-office.jpg?s=1024x1024&w=is&k=20&c=sLoiWg6VFswlNufAex_y7WMwO_wuUZCCX8KlyqrmlZ4=",
+                "https://media.istockphoto.com/id/812466908/photo/law-and-justice-concept.jpg?s=1024x1024&w=is&k=20&c=0QCFakicHpGjXRZg4Cy5WaPw2LQZRIfftn4DS05tqko=",
+                "https://media.istockphoto.com/id/844110558/photo/justice-and-law-concept-male-lawyer-in-the-office.jpg?s=1024x1024&w=is&k=20&c=ikkSrra2CO-UougoaNb7flbNY0pO4PtzYmMYonq09Sw=",
+                "https://media.istockphoto.com/id/585810218/photo/judge-removing-money-from-envelope.jpg?s=1024x1024&w=is&k=20&c=lUklR_HymkVzsKSYTYv8pOD2aOw6HUdgtqUNoRJl6tg=",
+                "https://media.istockphoto.com/id/1485944894/photo/male-lawyer-working-at-table-in-office.jpg?s=1024x1024&w=is&k=20&c=GnILmD1WqOaYjn4927NJVhgCkTXFNn_kpl4j84kD8Ho=",
+                "https://media.istockphoto.com/id/637294178/photo/gavel-in-front-of-row-of-law-books.jpg?s=1024x1024&w=is&k=20&c=gsUGZh9aR28WFuFLnnF4Orn5im8mzBcpHrRZCDrSxCU=",
+                "https://cdn.pixabay.com/photo/2021/09/19/05/49/law-6636932_1280.jpg",
+                "https://cdn.pixabay.com/photo/2023/12/10/19/08/judgment-8442199_1280.png",
+                "https://media.istockphoto.com/id/676815488/photo/law-and-justice.jpg?s=1024x1024&w=is&k=20&c=hOAe8YIDFTUDFcJvAu24HujkJo-o3BQrYmPfUBKS36E=",
+                "https://cdn.pixabay.com/photo/2017/06/09/22/56/lady-justice-2388500_1280.jpg",
+                "https://cdn.pixabay.com/photo/2015/08/21/13/28/courtroom-898931_1280.jpg"
+            ]
+
+            const minus = document.querySelector('#minus')
+            const plus = document.querySelector('#plus')
+            const  gallery = document.querySelector('#gallery')
+
+            gallery.src=img_array[0];
+            gallery.className="0";
+            
+            function zoomIn() {
+                if (parseInt(gallery.className)>0) {
+                    gallery.className = (parseInt(gallery.className)-1).toString();
+                    gallery.src = img_array[parseInt(gallery.className)];
+                } else {
+                    gallery.className = (img_array.length-1).toString();
+                    gallery.src = img_array[parseInt(gallery.className)];
+                }
+            }
+            function zoomOut() {
+                if (parseInt(gallery.className)<img_array.length-1) {
+                    gallery.className = (parseInt(gallery.className)+1).toString();
+                    gallery.src = img_array[parseInt(gallery.className)];
+                } else {
+                    gallery.className = "0";
+                    gallery.src = img_array[parseInt(gallery.className)];
+                }
+            }
+
+            minus.onclick = zoomIn;
+            plus.onclick = zoomOut;
+        </script>
+        <noscript>You need to enable JavaScript to view the full site.</noscript>
+    </body>
+</html>
