@@ -53,9 +53,21 @@ form {
     margin: auto;
 }
 
-form img {
+form fieldset img {
     width: 700px;
     height: 400px;
+    border-radius: 15px;
+}
+
+#pictures {
+    display: flex;
+    justify-content: center;
+}
+
+#pictures img {
+    width: 100px;
+    height: 60px;
+    margin: 5px;
 }
 
 fieldset {
@@ -98,11 +110,25 @@ form button:hover {
 }
 
 .red {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     color: red;
 }
 .green {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     color: green;
 }
 h2 {
     font-size: large;
+}
+
+.line-by-line {
+    display: grid;
+}
+
+.line-by-line p {
+    display: none;
 }

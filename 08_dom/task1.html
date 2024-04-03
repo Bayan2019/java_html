@@ -27,7 +27,7 @@
                         <input type="text" placeholder="Enter your PassWord" id="pass" required />
                     </div>
                 </fieldset>
-                <button type="button" id="submit" click="auth()" >Submit</button>
+                <button type="button" id="submit" click="auth()" >Sign In</button>
             </form>
             <h2></h2>
         </main>
@@ -41,8 +41,7 @@
             const h2 = document.querySelector('h2')
             const form = document.querySelector('form')
             const submit = document.querySelector('#submit')
-
-            console.log(submit.innerText)
+            const inputs = document.querySelectorAll('input')
             
             function auth() {
                 for (let user of users) {
@@ -55,9 +54,12 @@
                 if (h2.innerText=='') {
                     h2.className="red";
                     h2.innerText="Invalid"
+                    inputs.forEach((input)=>input.style.border="1px solid red")
+                    
                 } else {
                     h2.className="green";
                     h2.innerText="Authenticated";
+                    inputs.forEach((input)=>input.style.border="1px solid green")
                 }
                 
             }

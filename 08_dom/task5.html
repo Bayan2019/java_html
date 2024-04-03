@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript</title>
+        <link rel="stylesheet" type="text/css" href='./task.css' />
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos4.png" />
+        <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
+    </head>
+    <body>
+        <header>
+            <img src="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos3.png" alt="SAPAR" />
+            <h1>Ocean Gallery</h1>
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Ocean</legend>
+                    <img id="gallery" src="https://cdn.pixabay.com/photo/2016/11/29/04/19/ocean-1867285_1280.jpg" />          
+                </fieldset>
+            </form>
+            <div id="pictures">
+                <img src="https://cdn.pixabay.com/photo/2016/11/29/04/19/ocean-1867285_1280.jpg" />
+                <img src="https://cdn.pixabay.com/photo/2014/12/16/22/25/woman-570883_1280.jpg" />
+                <img src="https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_1280.jpg" />
+                <img src="https://media.istockphoto.com/id/1172427455/photo/beautiful-sunset-over-the-tropical-sea.jpg?s=1024x1024&w=is&k=20&c=O5hWBVPkIW8dMUosrba6MUmvHR0Y1kiSpcehw8Mg_xM=" />
+                <img src="https://media.istockphoto.com/id/1450094329/photo/colorful-sunset-viewed-from-the-pink-sea-beach-with-soft-waves.jpg?s=1024x1024&w=is&k=20&c=p741A7oBXh4s-dreQBM7cT2QG4tqBDGrCoMIs2p3kfg=" />
+                <img src="https://cdn.pixabay.com/photo/2013/12/17/20/10/bubbles-230014_1280.jpg" />
+            </div>
+        </main>
+        <script>
+            const  gallery = document.querySelector('#gallery')
+
+            let pictures_img = document.querySelectorAll('#pictures img')
+
+            for (let img of pictures_img) {
+                img.onclick = () => {
+                    gallery.src=img.src; 
+                    img.style.border="5px solid #57CC98";
+                    pictures_img.forEach(
+                        (x) => {
+                            if (x.src!==gallery.src) {
+                                x.style.border="none"
+                            }
+                        }
+                    )
+                }
+            }
+        </script>
+        <noscript>You need to enable JavaScript to view the full site.</noscript>
+    </body>
+</html>
