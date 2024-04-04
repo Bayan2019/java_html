@@ -12,71 +12,63 @@
     <body>
         <header>
             <img src="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos3.png" alt="SAPAR" />
-            <h1>Transaction</h1>
+            <h1>Sprint Task 3</h1>
         </header>
         <main>
             <form>
                 <fieldset>
-                    <legend>Individual</legend>
+                    <legend>Request</legend>
                     <div class="input-text">
-                        <label for="name1">First Name</label>
-                        <input type="text" placeholder="Enter your Name" id="name1" required />
+                        <label for="amount">Enter the Amount</label>
+                        <input type="number" placeholder="Enter your Name" id="amount" required />
                     </div>
                     <div class="input-text">
-                        <label for="surname">Last Name</label>
-                        <input type="text" placeholder="Enter your Surname" id="surname" required />
+                        <label for="currencyList">Currency</label>
+                        <select id="currencyList">
+                            <option value="kzt">KZT</option>
+                            <option value="usd">USD</option>
+                            <option value="eur">EUR</option>
+                        </select>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>Account</legend>
+                    <legend>Result</legend>
                     <div class="input-text">
-                        <label for="card">Card's Number</label>
-                        <input type="text" placeholder="0000-0000-0000-0000" id="card" required />
+                        <label for="kzt">KZT (tenge)</label>
+                        <h3 id="kzt">-</h3>
                     </div>
                     <div class="input-text">
-                        <label for="cvv">Card's CVV</label>
-                        <input type="password" id="cvv" required />
+                        <label for="usd">USD (dollar)</label>
+                        <h3 id="usd">-</h3>
+                    </div>
+                    <div class="input-text">
+                        <label for="eur">EUR (euro)</label>
+                        <h3 id="eur">-</h3>
                     </div>
                 </fieldset>
-                <button type="button" id="submit" >Complete</button>
             </form>
             <h2></h2>
         </main>
         <script>
-            const users = [{"card": "4035 5010 0000 0008", "cvv":123, "name":"Ilyas", "surname": "Yusupov"},
-            {"card": "4360 0000 0100 0005", "cvv":977, "name":"Abdulla", "surname": "Nurgaliev"},
-            {"card": "8171 9999 2766 0000", "cvv":143, "name":"Erasyl", "surname": "Karimov"},
-            {"card": "6243 0300 0000 0001", "cvv":608, "name":"Inkar", "surname": "Shevchenko"},
-            {"card": "5019 5555 4444 5555", "cvv":234, "name":"Aigerim", "surname": "Iskakova"},
-            {"card": "4571 0000 0000 0001", "cvv":963, "name":"Karim", "surname": "Asanov"},
-            {"card": "6011 6011 6011 6611", "cvv":488, "name":"Aykorkem", "surname": "Alieva"},
-            {"card": "3569 9900 1009 5841", "cvv":368, "name":"Maksat", "surname": "Musaev"},
-            {"card": "6771 7980 2100 0008", "cvv":234, "name":"Aibek", "surname": "Omarov"}];
-
-            const h2 = document.querySelector('h2')
-            const form = document.querySelector('form')
-            const submit = document.querySelector('#submit')
             
-            function auth() {
-                h2.innerText="";
-                for (const user of users) {
-                    if ((user['card']==card.value) && (user['cvv']==cvv.value) && (user['name']==name1.value) && (user['surname']==surname.value)) {
-                        h2.className="green";
-                        h2.innerText="Success";
-                        break;
-                    }
+            function convert() {
+                if (currencyList.value=='kzt') {
+                    kzt.innerText = '-';
+                    usd.innerText = (amount.value/431).toFixed(2);
+                    eur.innerText = (amount.value/509).toFixed(2);
+                } else if (currencyList.value=='usd') {
+                    kzt.innerText = (amount.value*429).toFixed(2);
+                    usd.innerText = '-';
+                    eur.innerText = (amount.value*(429/509)).toFixed(2);
+                } else if (currencyList.value=='eur') {
+                    kzt.innerText = (amount.value*507).toFixed(2);
+                    usd.innerText = (amount.value*(507/431)).toFixed(2);
+                    eur.innerText = '-';
                 }
-                if (h2.innerText=='') {
-                    h2.className="red";
-                    h2.innerText="Invalid"
-                } else {
-                    h2.className="green";
-                    h2.innerText="Success";
-                }
-                
             }
 
-            submit.addEventListener('click', auth);
+            amount.addEventListener('change', convert);
+            currencyList.addEventListener('change', convert);
 
 
         </script>

@@ -132,3 +132,9 @@ h2 {
 .line-by-line p {
     display: none;
 }
+
+h3 {
+    background-color: var(--header-background);
+    border-radius: 15px;
+    text-align: center;
+}
