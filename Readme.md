@@ -19,12 +19,12 @@ To make pages more light and portable I used link for images from the internet s
 ## 3. CSS Basics
 
 1. [Regular Task](https://github.com/Bayan2019/java_html/tree/main/03_css/Task)
-2. [Sprint Task](https://github.com/Bayan2019/java_html/tree/main/03_css/SprintTask)
+2. [Sprint Task 1](https://github.com/Bayan2019/java_html/tree/main/03_css/SprintTask)
 
 ## 4. Flexbox
 
 1. [Regular Task](https://github.com/Bayan2019/java_html/tree/main/04_flexbox/Task)
-2. [Sprint Task](https://github.com/Bayan2019/java_html/tree/main/04_flexbox/SprintTask)
+2. [Sprint Task 2](https://github.com/Bayan2019/java_html/tree/main/04_flexbox/SprintTask)
 
 ## 5. JavaScript Basics
 
@@ -71,8 +71,14 @@ To make pages more light and portable I used link for images from the internet s
 4. [Justice Gallery](https://github.com/Bayan2019/java_html/blob/main/08_dom/task4.html)
 5. [Ocean Gallery](https://github.com/Bayan2019/java_html/blob/main/08_dom/task5.html)
 6. [Register](https://github.com/Bayan2019/java_html/blob/main/08_dom/task6.html)
-7. [Sprint](https://github.com/Bayan2019/java_html/blob/main/08_dom/sprintTask.html)
+7. [Sprint Task 3](https://github.com/Bayan2019/java_html/blob/main/08_dom/sprintTask.html)
 
 ## 9. Local Storage
 
+1. [Register]()
+2. [MiniMarket]()
+3. [Sprint Task 4]()
+
 ## 10. Bootstrap Basics
+
+1. [Sprint Task 5]()
