@@ -65,13 +65,13 @@ To make pages more light and portable I used link for images from the internet s
 
 ## 8. DOM
 
-1. [Authentification]()
-2. []()
-3. []()
-4. []()
-5. []()
-6. []()
-7. [Sprint]()
+1. [Authentification](https://github.com/Bayan2019/java_html/blob/main/08_dom/task1.html)
+2. [Zoom](https://github.com/Bayan2019/java_html/blob/main/08_dom/task2.html)
+3. [Transaction](https://github.com/Bayan2019/java_html/blob/main/08_dom/task3.html)
+4. [Justice Gallery](https://github.com/Bayan2019/java_html/blob/main/08_dom/task4.html)
+5. [Ocean Gallery](https://github.com/Bayan2019/java_html/blob/main/08_dom/task5.html)
+6. [Register](https://github.com/Bayan2019/java_html/blob/main/08_dom/task6.html)
+7. [Sprint](https://github.com/Bayan2019/java_html/blob/main/08_dom/sprintTask.html)
 
 ## 9. Local Storage
 

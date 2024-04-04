@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript</title>
+        <link rel="stylesheet" href="../08_dom/task.css" />
+        <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" />
+        <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
+    </head>
+    <body>
+        <header>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" alt="SAPAR" />
+            <h1>Register</h1>
+        </header>
+        <main>
+            <form>
+                <fieldset class="line-by-line">
+                    <legend>Sign Up</legend>
+                    <div class="input-text">
+                        <label for="name1">First Name</label><br />
+                        <input type="text" id="name1" required />
+                        <p id="errorName"></p>
+                    </div>
+                    <div class="input-text">
+                        <label for="surname">Last Name</label><br />
+                        <input type="password" id="surname" required />
+                        <p id="errorSurname"></p>
+                    </div>
+                    <div class="input-text">
+                        <label for="country">Retype Password</label><br />
+                        <select id="country">
+                            <option>Kazakhstan</option>
+                            <option>Uzbekistan</option>
+                            <option>Kyrgyzstan</option>
+                            <option>Tajikistan</option>
+                            <option>Turkmenistan</option>
+                            <option>Afghanistan</option>
+                        </select>
+                        <p id="errorCountry"></p>
+                    </div>
+                    <div class="input-text">
+                        <label for="phone">Last Name</label><br />
+                        <input type="text" id="phone" required />
+                        <p id="errorPhone"></p>
+                    </div>
+                </fieldset>
+                <button type="button" id="submit" >REGIISTER</button>
+                <button type="button" id="save" >SAVE TO DRAFT</button>
+            </form>
+            <h2></h2>
+        </main>
+        <script>
+
+            users = ["sapar@gmail.com", "rob@gmail.com",
+            "pershing@mail.ru", "insar@yandex.ru", "alikh@gmail.com"];
+
+            const h2 = document.querySelector('h2')
+            const form = document.querySelector('form')
+            const submit = document.querySelector('#submit')
+            let ps = document.querySelectorAll('.line-by-line p')
+            
+            function register() {
+                ps.forEach(p => p.style.display="none");
+                
+                for (const user of users) {
+                    if (user==email.value) {
+                        h2.className="red";
+                        h2.innerText="Current email is already in use"
+                        errorEmail.className="red";
+                        errorEmail.innerText="Current email is already in use"
+                        errorEmail.style.display="flex"
+                        return;
+                    }
+                }
+
+                if (password1.value.length<6) {
+                    h2.className="red";
+                    h2.innerText="Password length at least must be 6 symbols"
+                    errorPassword1.className="red";
+                    errorPassword1.innerText="Password length at least must be 6 symbols";
+                    errorPassword1.style.display="flex";
+                    return;
+                } else if (password1.value!==password2.value) {
+                    h2.className="red";
+                    h2.innerText="Passwords are not same"
+                    errorPassword2.className="red";
+                    errorPassword2.innerText="Passwords are not same";
+                    errorPassword2.style.display="flex";
+                    return;
+                } else {
+                    users.push(email.value);
+                    h2.className="green";
+                    h2.innerText="Registered!";
+                }
+            }
+
+            submit.addEventListener('click', register);
+
+
+        </script>
+        <noscript>You need to enable JavaScript to view the full site.</noscript>
+    </body>
+</html>
