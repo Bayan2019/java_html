@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>LocalStorage</title>
-        <link rel="stylesheet" href="../08_dom/task.css" />
-        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos4.png" />
+        <link rel="stylesheet" href="../../08_dom/task.css" />
+        <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" />
         <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
     </head>
     <body>
         <header>
-            <img src="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos3.png" alt="SAPAR" />
-            <h1>Save</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" alt="SAPAR" />
+            <h1>Sprint Task 4</h1>
         </header>
         <main>
             <form>
@@ -53,14 +53,14 @@
         </main>
         <script>
             
-            function saveFunction(e) {
+            function save() {
                 localStorage.setItem("name", name1.value);
                 localStorage.setItem("surname", surname.value);
                 localStorage.setItem("country", country.value);
                 localStorage.setItem("phone", phone.value);
             }
 
-            save.addEventListener('click', saveFunction);
+            submit.addEventListener('click', register);
 
 
         </script>
