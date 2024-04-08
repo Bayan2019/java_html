@@ -138,3 +138,42 @@ h3 {
     border-radius: 15px;
     text-align: center;
 }
+
+header .fa {
+    color: var(--header-color);
+    font-size: 40px;
+}
+
+header img:hover, header i:hover {
+    color: greenyellow;
+    font-size: 50px;
+    height: 60px;
+}
+
+.product {
+    background-color: var(--fieldset-background);
+    border-radius: 10px;
+    margin: 3px;
+    padding: 6px;
+}
+
+.name {
+    display: grid;
+    justify-content: space-around;
+}
+
+main .fa {
+    font-size: 30px;
+    color: #043707;
+}
+
+main .material-icons {
+    font-size: 30px;
+    color: red;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

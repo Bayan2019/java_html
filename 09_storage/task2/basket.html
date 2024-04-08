@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LocalStorage</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos4.png" />
+        <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="../../08_dom/task.css" />
+    </head>
+    <body>
+        <header>
+            <a href="./main.html">
+                <img src="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos3.png" alt="SAPAR" />
+            </a>
+            <h1>Mini Market</h1>
+            <a href="./basket.html">
+                <i class="fa fa-shopping-cart"></i>
+            </a>
+        </header>
+        <main>      
+        </main>
+        <script>
+
+            let chosen = JSON.parse(localStorage.getItem("chosen"))||[];
+
+            const main = document.querySelector("main")
+            chosen.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = "product";
+                div.innerHTML = `
+                    <h4 class="name">${item.name}</h4>
+                        <div class="price">
+                            <strong>${item.price} USD</strong>
+                            <i class="material-icons" id="${index}-icon">delete</i>
+                        </div>
+                        <p class="description">
+                            ${item.description}
+                        </p>
+                `
+                main.append(div);
+                const icon = document.getElementById(index+"-icon");
+                console.log(icon.id)
+                icon.addEventListener("click", ()=>{
+                    if (chosen.length==1) {
+                        chosen = [];
+                    } else {
+                        if (index===0) {
+                            chosen.shift();
+                        } else {
+                            chosen.splice(index, 1);
+                        }
+                    }
+                    console.log(chosen)
+                    localStorage.setItem("chosen", JSON.stringify(chosen));
+                    document.location.reload();
+                })
+            })
+        </script>
+        <noscript>You need to enable JavaScript to view the full site.</noscript>
+    </body>
+</html>

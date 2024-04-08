@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LocalStorage</title>
+        <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos4.png" />
+        <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+        <link rel="stylesheet" href="../../08_dom/task.css" />
+    </head>
+    <body>
+        <header>
+            <a href="./main.html">
+                <img src="https://raw.githubusercontent.com/Bayan2019/project02/main/images/logos3.png" alt="SAPAR" />
+            </a>
+            <h1>Mini Market</h1>
+            <a href="./basket.html">
+                <i class="fa fa-shopping-cart"></i>
+            </a>
+        </header>
+        <main>      
+        </main>
+        <script>
+
+            // localStorage.clear();
+
+            const products = [
+                {
+                    name: "IPhone 12 Pro",
+                    price: 1200,
+                    description: "6 GB RAM, Memory 128 GB, double front-back camera",
+                    id: 1
+                },
+                {
+                    name: "XIAMOR REDMI NOTE 8",
+                    price: 250,
+                    description: "6 GB RAM, Memory 64 GB, 3 cameras in back",
+                    id: 2
+                },
+                {
+                    name: "ASUS Tuf Gaming Pro",
+                    price: 1500,
+                    description: "24 GB RAM, SSD 1 TB, RX Radeon",
+                    id: 3
+                },
+                {
+                    name: "Samsung Galaxy Note 13",
+                    price: 999,
+                    description: "4 GB RAM, Memory 256 GB, front-back camera",
+                    id: 4
+                }
+            ]
+
+            const chosen = JSON.parse(localStorage.getItem("chosen"))||[];
+
+            const main = document.querySelector("main")
+            products.forEach(item => {
+                const div = document.createElement('div');
+                div.id = `${item.id}`;
+                div.className = "product";
+                div.innerHTML = `
+                    <h4 class="name">${item.name}</h4>
+                        <div class="price">
+                            <strong>${item.price} USD</strong>
+                            <i class="fa fa-cart-plus" id="${item.id}-icon"></i>
+                        </div>
+                        <p class="description">
+                            ${item.description}
+                        </p>
+                `
+                main.append(div);
+                const icon = document.getElementById(item.id+"-icon");
+                icon.addEventListener("click", ()=>{
+                    console.log(item.name)
+                    const found = products.find((el) => el.id===item.id);
+                    chosen.push(found);
+                    localStorage.setItem("chosen", JSON.stringify(chosen))
+                })
+            })
+        </script>
+        <noscript>You need to enable JavaScript to view the full site.</noscript>
+    </body>
+</html>
