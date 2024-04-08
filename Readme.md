@@ -75,7 +75,7 @@ To make pages more light and portable I used link for images from the internet s
 
 ## 9. Local Storage
 
-1. [Register]()
+1. [Save Draft](https://github.com/Bayan2019/java_html/blob/main/09_storage/task1.html)
 2. [MiniMarket]()
 3. [Sprint Task 4]()
 
