@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LocalStorage</title>
+        <link rel="stylesheet" href="sprintTask.css" />
+        <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" />
+        <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
+    </head>
+    <body>
+        <header>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" alt="SAPAR" />
+            <h1>Sprint Task 4</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./login.html">
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./register.html">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form>
+            <fieldset class="line-by-line">
+                <div class="input-text">
+                    <label for="email">EMAIL</label><br />
+                    <input type="text" id="email" required />
+                    <p id="errorEmail"></p>
+                </div>
+                <div class="input-text">
+                    <label for="password">Password</label><br />
+                    <input type="password" id="password" required />
+                </div>
+            </fieldset>
+            </form>
+            <button type="submit" id="signin">signin</button>
+            <h2 class="hidden">hmmm</h2>
+        </main>
+        <script>
+
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+            const h2 = document.querySelector('h2')
+            console.log(h2.innerText);
+            function enter() {
+                const user = users.find((user)=>user.email===email.value);
+                console.log(!user)
+                if (!user) { 
+                    h2.className = 'red';
+                    h2.innerText = "Invalid";
+                } else {
+                    if (user["password"]==password.value) {
+                        localStorage.setItem("email", user.email);
+                        localStorage.setItem("name", user.name);
+                        localStorage.setItem("surname", user.surname);
+                        localStorage.setItem("country", user.country);
+                        localStorage.setItem("birthday", user.birthday);
+                        window.location = "./profile.html";
+                    } else {
+                        h2.className = 'red';
+                        h2.innerText = "Invalid Password";
+                    }
+                }
+            }
+
+            signin.addEventListener('click', enter);
+
+
+        </script>
+        <noscript>You need to enable JavaScript to view the full site.</noscript>
+    </body>
+</html>
